@@ -23,4 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
             repositoryElement.innerText = json.public_repos;
             linkElement.href = json.html_url;
         })
+        .catch(function(error) {
+            console.error('Houve um erro ao carregar os dados:', error);
+        });
 })
